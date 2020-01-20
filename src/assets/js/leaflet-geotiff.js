@@ -74,6 +74,7 @@ L.LeafletGeotiff = L.ImageOverlay.extend({
         request.send();
     },
     _parseTIFF: function (arrayBuffer) {
+
         this.tiff = GeoTIFF.parse(arrayBuffer);
         
         if (typeof(this.options.image)=='undefined') {
@@ -82,10 +83,12 @@ L.LeafletGeotiff = L.ImageOverlay.extend({
         if (typeof(this.options.band)=='undefined') {
             this.options.band = 0;
         }
+        
         this.setBand(this.options.band);
   
         if (!this.options.bounds) {
             var image = this.tiff.getImage(this.options.image);
+            debugger
             var meta = image.getFileDirectory();
             var x_min = meta.ModelTiepoint[3];
             var x_max = x_min + meta.ModelPixelScale[0]*meta.ImageWidth;
