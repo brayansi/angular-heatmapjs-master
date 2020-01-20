@@ -1,1 +1,1 @@
-![Heatmap Demo](https://res.cloudinary.com/idr/image/upload/v1572696287/github-repo/angular-heatmap-click-preview_scaawo.png)
+![Heatmap Demo](https://github.com/brayansi/angular-heatmapjs-master-/blob/master/src/assets/Capturar.PNG?raw=true)
